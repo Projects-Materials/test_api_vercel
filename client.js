@@ -1,4 +1,4 @@
-import { createClient } from 'redis';
+const { createClient } = require('redis');
 
 const client = createClient({
     password: '29IS5TCw1pOEo250iS4wctecqcY32EzW',
