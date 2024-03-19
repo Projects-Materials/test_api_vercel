@@ -7,7 +7,7 @@ module.exports =  conc = async(req,res)=>{
         const movies = await collection.trendingMovies(1);
         await client.set('cached_value', JSON.stringify(movies));
         await client.expire('cached_value', 20);
-        res.status(200).json({way : database, data : movies})
+        res.status(200).json({way : "database", data : movies})
     }catch(error){
         res.status(500).json({error: error.message});
     }
