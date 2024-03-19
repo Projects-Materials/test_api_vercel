@@ -1,6 +1,11 @@
-const { Redis } = require("ioredis"); 
+import { createClient } from 'redis';
 
-const client = new Redis();
-
+const client = createClient({
+    password: '29IS5TCw1pOEo250iS4wctecqcY32EzW',
+    socket: {
+        host: 'redis-11808.c10.us-east-1-2.ec2.cloud.redislabs.com',
+        port: 11808
+    }
+});
 
 module.exports = client;
