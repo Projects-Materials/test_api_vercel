@@ -6,6 +6,6 @@ const client = createClient({
         host: 'redis-11808.c10.us-east-1-2.ec2.cloud.redislabs.com',
         port: 11808
     }
-});
+}).connect();
 
 module.exports = client;
